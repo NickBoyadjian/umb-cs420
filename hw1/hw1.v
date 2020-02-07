@@ -1,0 +1,147 @@
+(*
+simpl, reflexivity, intros, rewrite, destruct, induction, apply, assert
+*)
+
+(**
+Show that 5 equals 5.
+ *)
+Theorem ex1: 5 = 5.
+Proof.
+  reflexivity.
+Qed.
+
+(**
+Show that equality for natural numbers is reflexive.
+ *)
+Theorem ex2: forall (x:nat), x = x. 
+Proof.
+  intros.
+  reflexivity.
+Qed.
+
+(**
+Show that [1 + n] equals the successor of 1.
+ *)
+Theorem ex3: forall n, 1 + n = S n.
+Proof.
+  intros.
+  reflexivity.
+Qed.
+
+(**
+Show that if [x = y], then [y = x].
+ *)
+Theorem ex4: forall x (y:nat), x = y -> y = x.
+Proof.
+  intros.
+  rewrite H.
+  reflexivity.
+Qed.
+
+(**
+Show that if the result of the conjunction and the disjunction equal,
+then both boolean values are equal.
+
+ *)
+Theorem ex5: forall (b c : bool), (andb b c = orb b c) -> b = c.
+Proof.
+  intros b c H.
+  destruct b.
+  - assert (H': forall (b : bool), orb true b = true). { reflexivity. }
+    rewrite H' in H.
+    rewrite <- H.
+    reflexivity.
+  - assert (H': forall (b : bool), andb false b = false). { reflexivity. }
+    rewrite H' in H.
+    rewrite -> H.
+    reflexivity.
+Qed.
+
+
+(**
+In an addition, we can move the successor of the left-hand side to
+the outer most.
+
+ *)
+Theorem ex6: forall n m, n + S m = S (n + m).
+Proof.
+  intros.
+  induction n.
+  - simpl. reflexivity.
+  - simpl.
+    rewrite IHn.
+    reflexivity.
+Qed.
+
+(**
+If two additions are equal, and the numbers to the left of each addition
+are equal, then the numbers to the right of each addition must be equal.
+
+ *)
+
+Lemma S_injective : forall x y n, S (n + x) = S (n + y) -> n + y = n + x.
+Proof.
+  intros.
+  induction n.
+Admitted.
+
+
+Theorem ex7: forall x y n, n + x = n + y -> x = y.
+Proof.
+  intros.
+  induction n.
+  - simpl in H. rewrite H. reflexivity.
+  - simpl in H.
+    apply eq_add_S in H.
+    apply IHn.
+    rewrite H.
+    reflexivity.
+Qed.
+
+(**
+Show that addition is commutative.
+Hint: You might need to prove `x + 0 = x` and `S (y + x) = y + S x`
+separately.
+
+ *)
+Lemma x_plus_O x : 
+  x + 0 = x.
+Proof.
+  induction x.
+  - simpl. reflexivity.
+  - simpl. rewrite IHx. reflexivity.
+Qed.
+
+Lemma x_plus_Sy x y :
+  x + S y = S (x + y).
+Proof.
+  induction x.
+  - simpl. reflexivity.
+  - simpl. rewrite IHx. reflexivity.
+Qed.
+
+
+Theorem ex8: forall x y, x + y = y + x.
+Proof.
+  intros.
+  induction x.
+  - simpl. rewrite x_plus_O. reflexivity.
+  - simpl. rewrite IHx. rewrite x_plus_Sy. reflexivity.
+Qed. 
+
+(**
+If two additions are equal, and the numbers to the right of each addition
+are equal, then the numbers to the left of each addition must be equal.
+
+Hint: Do not try to prove this theorem directly. You should be using
+auxiliary results. You can use Admitted theorems.
+
+ *)
+Theorem ex9: forall x y n, x + n = y + n -> x = y.
+Proof.
+  intros.
+  rewrite ex8 in H. rewrite (ex8 y) in H.
+  apply ex7 in H.
+  rewrite H.
+  reflexivity.
+Qed.
