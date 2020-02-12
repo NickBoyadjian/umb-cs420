@@ -1,0 +1,80 @@
+(*
+        #####################################################
+        ###  PLEASE DO NOT DISTRIBUTE SOLUTIONS PUBLICLY  ###
+        #####################################################
+*)
+Require Turing.Util.
+Require Import Coq.Lists.List.
+Import ListNotations.
+
+(* ---------------------------------------------------------------------------*)
+
+
+(**
+
+Study the definition of [Turing.Util.pow] and [Turing.Util.pow1]
+and then show that [Turing.Util.pow1] can be formulated in terms of
+[Turing.Util.pow].
+Material: https://gitlab.com/cogumbreiro/turing/blob/master/src/Util.v
+
+
+ *)
+Theorem ex1: forall (A:Type) (x:A) n, Util.pow [x] n = Util.pow1 x n.
+Proof.
+    (* TODO: WRITE THE PROOF AND REMOVE THIS COMMENT *)
+Admitted.
+
+(**
+
+Study recursive definition of [List.In] and the inductive definition of
+[List.Exists]. Then show that [List.In] can be formulated in terms
+of [List.Exists].
+
+Material: https://coq.inria.fr/library/Coq.Lists.List.html
+
+
+ *)
+Theorem ex2: forall (A:Type) (x:A) l, List.Exists (eq x) l <-> List.In x l.
+Proof.
+    (* TODO: WRITE THE PROOF AND REMOVE THIS COMMENT *)
+Admitted.
+
+(**
+
+Create an inductive relation that shows that the list on the left
+is a prefix of the list on the right; or, to put it differently,
+the second list starts with the first list.
+
+Exercise [ex3] should guide you on figuring out which cases your require.
+
+You can practice your definition with the following goals:
+
+  Goal Prefix [1;2;3] [1;2;3;4].
+  Goal Prefix [1;2;3] [1;2;3].
+  Goal Prefix [1;2;3] [1;2;3;4;5;6].
+  Goal forall (A:Type) l, @Prefix A [] l.
+
+
+ *)
+Inductive Prefix {A:Type}: list A -> list A -> Prop := (* TODO: FILL THIS IN AND REMOVE THIS COMMENT *).
+
+
+(**
+
+The proof should follow *without* requiring induction to conclude.
+The conclusion of this proof should guide you on figuring out what
+constructors to write for Prefix.
+
+
+ *)
+Theorem ex3: forall A l1 l2, @Prefix A l1 l2 -> l1 = [] \/ (exists x l1' l2', l1 = x :: l1' /\ l2 = x :: l2' /\ Prefix l1' l2').
+Proof.
+    (* TODO: WRITE THE PROOF AND REMOVE THIS COMMENT *)
+Admitted.
+
+
+Theorem ex4: forall A l1 l2, @Prefix A l1 l2 -> exists l3, l2 = l1 ++ l3.
+Proof.
+    (* TODO: WRITE THE PROOF AND REMOVE THIS COMMENT *)
+Admitted.
+
