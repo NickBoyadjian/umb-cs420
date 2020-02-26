@@ -43,22 +43,9 @@ Material: https://coq.inria.fr/library/Coq.Lists.List.html
 Theorem ex2: forall (A:Type) (x:A) l, List.Exists (eq x) l <-> List.In x l.
 Proof.
   intros.
-  induction l.
-  - simpl.
-    apply Exists_nil.
-  - simpl.
-    rewrite <- IHl.
-    rewrite Exists_cons.
-    rewrite IHl.
-    rewrite or_comm.
-    symmetry.
-    split.
-    * intros.
-      inversion H.
-      { right. rewrite <- H0. reflexivity. }
-      { left. apply H0. }
-    * intuition.
-Qed.
+  exists.
+  - .
+Admitted.
 
 (**
 
@@ -68,41 +55,17 @@ the second list starts with the first list.
 
 Exercise [ex3] should guide you on figuring out which cases your require.
 
+You can practice your definition with the following goals:
+
+  Goal Prefix [1;2;3] [1;2;3;4].
+  Goal Prefix [1;2;3] [1;2;3].
+  Goal Prefix [1;2;3] [1;2;3;4;5;6].
+  Goal forall (A:Type) l, @Prefix A [] l.
+
 
  *)
+Inductive Prefix {A:Type}: list A -> list A -> Prop := (* TODO: FILL THIS IN AND REMOVE THIS COMMENT *).
 
-Compute 1 :: [].
-
-Inductive Prefix {A:Type}: list A -> list A -> Prop := 
-  | nill_list : forall (l : list A) , Prefix [] l
-  | same_list : forall (l : list A) , Prefix l l
-  | starts_with : forall (x : A) (l1 : list A) (l2 : list A), Prefix (x :: l1) (x :: l2)
-.
-
-
-Theorem prefix1: Prefix [1;2;3] [1;2;3;4].
-Proof.
-  apply starts_with.
-Qed.
-
-
-Theorem prefix2: Prefix [1;2;3] [1;2;3].
-Proof.
-  apply same_list.
-Qed.
-
-
-Theorem prefix3: Prefix [1;2;3] [1;2;3;4;5;6].
-Proof.
-  apply starts_with.
-Qed.
-
-
-Theorem prefix4: forall (l:list nat), Prefix [] l.
-Proof.
-  intros.
-  apply nill_list.
-Qed.
 
 (**
 
@@ -114,10 +77,12 @@ constructors to write for Prefix.
  *)
 Theorem ex3: forall A l1 l2, @Prefix A l1 l2 -> l1 = [] \/ (exists x l1' l2', l1 = x :: l1' /\ l2 = x :: l2' /\ Prefix l1' l2').
 Proof.
-  intros.
+    (* TODO: WRITE THE PROOF AND REMOVE THIS COMMENT *)
 Admitted.
 
 
 Theorem ex4: forall A l1 l2, @Prefix A l1 l2 -> exists l3, l2 = l1 ++ l3.
 Proof.
+    (* TODO: WRITE THE PROOF AND REMOVE THIS COMMENT *)
 Admitted.
+
