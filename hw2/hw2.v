@@ -71,53 +71,70 @@ Exercise [ex3] should guide you on figuring out which cases your require.
 
  *)
 
-Compute 1 :: [].
-
 Inductive Prefix {A:Type}: list A -> list A -> Prop := 
-  | nill_list : forall (l : list A) , Prefix [] l
-  | same_list : forall (l : list A) , Prefix l l
-  | starts_with : forall (x : A) (l1 : list A) (l2 : list A), Prefix (x :: l1) (x :: l2)
-.
+  | prefix_nill : forall l , Prefix [] l
+  | prefix_add_one : forall (x : A) (l1 : list A) (l2 : list A), 
+      Prefix l1 l2 -> Prefix (x :: l1) (x :: l2).
 
 
 Theorem prefix1: Prefix [1;2;3] [1;2;3;4].
 Proof.
-  apply starts_with.
+  apply prefix_add_one.
+  apply prefix_add_one.
+  apply prefix_add_one.
+  apply prefix_nill.
 Qed.
 
 
 Theorem prefix2: Prefix [1;2;3] [1;2;3].
 Proof.
-  apply same_list.
+  apply prefix_add_one.
+  apply prefix_add_one.
+  apply prefix_add_one.
+  apply prefix_nill.
 Qed.
 
 
 Theorem prefix3: Prefix [1;2;3] [1;2;3;4;5;6].
 Proof.
-  apply starts_with.
+  apply prefix_add_one.
+  apply prefix_add_one.
+  apply prefix_add_one.
+  apply prefix_nill.
 Qed.
 
 
 Theorem prefix4: forall (l:list nat), Prefix [] l.
 Proof.
   intros.
-  apply nill_list.
+  apply prefix_nill.
 Qed.
+
 
 (**
 
 The proof should follow *without* requiring induction to conclude.
 The conclusion of this proof should guide you on figuring out what
 constructors to write for Prefix.
-
-
  *)
+
+
 Theorem ex3: forall A l1 l2, @Prefix A l1 l2 -> l1 = [] \/ (exists x l1' l2', l1 = x :: l1' /\ l2 = x :: l2' /\ Prefix l1' l2').
 Proof.
   intros.
-Admitted.
-
+  destruct H.
+  - intros. left. auto.
+  - right.
+    -- exists x, l1, l2.
+      * split. 
+        { reflexivity. }
+        ** split. { reflexivity. } { apply H. }
+Qed.
 
 Theorem ex4: forall A l1 l2, @Prefix A l1 l2 -> exists l3, l2 = l1 ++ l3.
 Proof.
-Admitted.
+  intros.
+  induction H.
+  - exists l. auto.
+  - destruct IHPrefix. subst. exists x0. simpl. reflexivity.
+Qed.
