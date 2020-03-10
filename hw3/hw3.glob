@@ -1,0 +1,117 @@
+DIGEST 4aa679d8c02f5edf0fa47df42f19253c
+Fhw3
+R207:223 Coq.Strings.Ascii <> <> lib
+R241:254 Coq.Lists.List <> <> lib
+R284:287 Turing.Lang <> <> lib
+R317:320 Turing.Util <> <> lib
+prf 608:610 <> ex1
+R627:630 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R637:640 Coq.Init.Logic <> ::type_scope:x_'\/'_x not
+R632:634 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R631:631 hw3 <> w var
+R635:636 Coq.Lists.List ListNotations ::list_scope:'['_']' not
+R641:647 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R650:651 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R653:655 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R652:652 hw3 <> w var
+R659:662 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R663:664 hw3 <> w' var
+R623:624 Turing.Lang Examples L4 def
+R626:626 hw3 <> w var
+R702:703 Turing.Lang Examples L4 def
+R736:739 Turing.Lang LangNotations ::lang_scope:x_'^^'_x not
+prf 854:856 <> ex2
+R859:860 Turing.Lang <> In def
+R896:899 Turing.Lang LangNotations ::lang_scope:x_'>>'_x not
+R887:890 Turing.Lang LangNotations ::lang_scope:x_'>>'_x not
+R894:895 Turing.Lang LangNotations ::lang_scope:x_'*' not
+R862:862 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R866:867 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R871:872 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R876:877 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R881:881 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R922:923 Turing.Lang <> In def
+R935:938 Turing.Lang <> Star def
+prf 1039:1041 <> ex3
+R1044:1045 Coq.Init.Logic <> ::type_scope:'~'_x not
+R1046:1047 Turing.Lang <> In def
+R1073:1076 Turing.Lang LangNotations ::lang_scope:x_'>>'_x not
+R1064:1067 Turing.Lang LangNotations ::lang_scope:x_'>>'_x not
+R1071:1072 Turing.Lang LangNotations ::lang_scope:x_'*' not
+R1049:1049 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R1053:1054 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R1058:1058 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R1099:1100 Turing.Lang <> In def
+R1112:1114 Coq.Init.Logic <> not def
+prf 1199:1201 <> ex4
+R1215:1218 Turing.Lang LangNotations ::lang_scope:x_'=='_x not
+R1209:1212 Turing.Lang LangNotations ::lang_scope:x_'>>'_x not
+R1207:1208 Turing.Lang LangNotations ::lang_scope:x_'*' not
+R1213:1214 Turing.Lang LangNotations ::lang_scope:'{}' not
+R1219:1220 Turing.Lang LangNotations ::lang_scope:'{}' not
+R1238:1250 Turing.Lang <> app_r_void_rw thm
+R1238:1250 Turing.Lang <> app_r_void_rw thm
+prf 1355:1357 <> ex5
+R1384:1387 Turing.Lang LangNotations ::lang_scope:x_'=='_x not
+R1360:1360 Turing.Lang LangNotations ::lang_scope:x_'>>'_x not
+R1370:1376 Turing.Lang LangNotations ::lang_scope:x_'>>'_x not
+R1382:1383 Turing.Lang LangNotations ::lang_scope:x_'>>'_x not
+R1364:1366 Turing.Lang LangNotations ::lang_scope:x_'U'_x not
+R1367:1369 Turing.Lang <> Nil def
+R1380:1381 Turing.Lang LangNotations ::lang_scope:x_'*' not
+R1388:1389 Turing.Lang LangNotations ::lang_scope:x_'U'_x not
+R1402:1408 Turing.Lang LangNotations ::lang_scope:x_'U'_x not
+R1414:1415 Turing.Lang LangNotations ::lang_scope:x_'U'_x not
+R1393:1396 Turing.Lang LangNotations ::lang_scope:x_'>>'_x not
+R1400:1401 Turing.Lang LangNotations ::lang_scope:x_'*' not
+R1412:1413 Turing.Lang LangNotations ::lang_scope:x_'*' not
+prf 1512:1514 <> ex6
+R1517:1517 Turing.Lang LangNotations ::lang_scope:x_'=='_x not
+R1541:1545 Turing.Lang LangNotations ::lang_scope:x_'=='_x not
+R1528:1530 Turing.Lang LangNotations ::lang_scope:x_'U'_x not
+R1521:1524 Turing.Lang LangNotations ::lang_scope:x_'>>'_x not
+R1534:1537 Turing.Lang LangNotations ::lang_scope:x_'>>'_x not
+R1570:1573 Coq.Init.Logic <> ::type_scope:x_'\/'_x not
+R1557:1559 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1556:1556 hw3 <> w var
+R1560:1560 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R1564:1565 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R1569:1569 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R1575:1577 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1574:1574 hw3 <> w var
+R1578:1578 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R1582:1583 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R1587:1587 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+prf 1618:1620 <> ex7
+R1656:1659 Turing.Lang LangNotations ::lang_scope:x_'=='_x not
+R1649:1652 Turing.Lang LangNotations ::lang_scope:x_'>>'_x not
+R1626:1629 Turing.Lang LangNotations ::lang_scope:x_'>>'_x not
+R1630:1630 Turing.Lang LangNotations ::lang_scope:x_'*' not
+R1646:1648 Turing.Lang LangNotations ::lang_scope:x_'*' not
+R1640:1642 Turing.Lang LangNotations ::lang_scope:x_'U'_x not
+R1634:1636 Turing.Lang LangNotations ::lang_scope:x_'U'_x not
+R1643:1645 Turing.Lang <> Nil def
+R1653:1655 Turing.Lang <> Nil def
+R1663:1666 Turing.Lang LangNotations ::lang_scope:x_'>>'_x not
+R1667:1667 Turing.Lang LangNotations ::lang_scope:x_'*' not
+R1677:1679 Turing.Lang LangNotations ::lang_scope:x_'*' not
+R1671:1673 Turing.Lang LangNotations ::lang_scope:x_'U'_x not
+prf 1709:1711 <> ex8
+R1761:1764 Turing.Lang LangNotations ::lang_scope:x_'=='_x not
+R1714:1714 Turing.Lang LangNotations ::lang_scope:x_'*' not
+R1757:1760 Turing.Lang LangNotations ::lang_scope:x_'*' not
+R1715:1715 Turing.Lang LangNotations ::lang_scope:x_'U'_x not
+R1733:1737 Turing.Lang LangNotations ::lang_scope:x_'U'_x not
+R1719:1723 Turing.Lang LangNotations ::lang_scope:x_'>>'_x not
+R1732:1732 Turing.Lang LangNotations ::lang_scope:x_'>>'_x not
+R1727:1729 Turing.Lang LangNotations ::lang_scope:x_'U'_x not
+R1730:1731 Turing.Lang LangNotations ::lang_scope:'{}' not
+R1738:1738 Turing.Lang LangNotations ::lang_scope:x_'*' not
+R1755:1756 Turing.Lang LangNotations ::lang_scope:x_'*' not
+R1748:1751 Turing.Lang LangNotations ::lang_scope:x_'>>'_x not
+R1742:1745 Turing.Lang LangNotations ::lang_scope:x_'>>'_x not
+R1739:1741 Turing.Lang <> Nil def
+R1746:1747 Turing.Lang LangNotations ::lang_scope:'{}' not
+R1765:1765 Turing.Lang LangNotations ::lang_scope:x_'*' not
+R1776:1778 Turing.Lang LangNotations ::lang_scope:x_'*' not
+R1769:1772 Turing.Lang LangNotations ::lang_scope:x_'>>'_x not
