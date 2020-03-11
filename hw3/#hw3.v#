@@ -157,7 +157,6 @@ Proof.
          ** unfold Char; reflexivity.
 Qed.
 
-
 Theorem ex7: "b" >> ("a" U "b" U Nil) * >> Nil == "b" >> ("b" U "a") *.
 Proof.
 Admitted.
