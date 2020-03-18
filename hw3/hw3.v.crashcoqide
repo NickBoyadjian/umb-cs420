@@ -23,15 +23,15 @@ Show that any word that is in L4 is either empty or starts with "a".
  *)
 
 
-Theorem ex1: forall w, L4 w -> w = [] \/ exists w', w = "a" :: w'.
+Theorem ex11: forall w, L4 w -> w = [] \/ exists w', w = "a" :: w'.
 Proof.
   intros.
   unfold L4 in H.
-  induction H.
+  destruct H.
   destruct x.
   - left. apply pow_pow_in_inv in H. simpl in *. rewrite H. reflexivity.
-  - right. apply pow_pow_in_inv in H.
-    subst. simpl. exists ["a";"b"]. Search (pow1 _ _).  
+  - right. destruct H. destruct H. destruct H. destruct H0. exists ["b"]. rewrite H.
+    subst. unfold Char in H0. 
 Admitted.
 
 
@@ -118,11 +118,8 @@ Rearrange the following terms. Hint use the distribution and absorption laws.
 Theorem ex5: ("0" U Nil) >> ( "1" * ) == ( "0" >> "1" * ) U ( "1" * ).
 Proof.
   unfold Equiv.
-  unfold In.
-  unfold Char.
   split.
-  - intros. destruct H. destruct H. destruct H.
-
+  - intros. Search((_ U _) >> _). apply app_union_distr_l in H. Search Nil.
 
 Admitted.
 
@@ -159,10 +156,18 @@ Qed.
 
 Theorem ex7: "b" >> ("a" U "b" U Nil) * >> Nil == "b" >> ("b" U "a") *.
 Proof.
+  unfold Equiv, In.
+  split.
+  - intros. destruct H. destruct H. destruct H. destruct H0.  unfold Char, Star, App, Union.
+
 Admitted.
 
 
 Theorem ex8: (("b" >> ("a" U {}) ) U (Nil >> {} >> "c")* ) * == ("b" >> "a") *.
 Proof.
+  unfold Equiv.
+  split.
+  - intros. apply union_r_void_rw.
+
 Admitted.
 

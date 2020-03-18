@@ -13,6 +13,7 @@ Import Lang.Examples.
 Open Scope lang_scope.
 Open Scope char_scope.
 
+
 (* ---------------------------------------------------------------------------*)
 
 
@@ -26,13 +27,19 @@ Show that any word that is in L4 is either empty or starts with "a".
 Theorem ex1: forall w, L4 w -> w = [] \/ exists w', w = "a" :: w'.
 Proof.
   intros.
-  unfold L4 in H.
   induction H.
-  destruct x.
-  - left. apply pow_pow_in_inv in H. simpl in *. rewrite H. reflexivity.
-  - right. apply pow_pow_in_inv in H.
-    subst. simpl. exists ["a";"b"]. Search (pow1 _ _).  
-Admitted.
+  induction x.
+  - left. 
+    destruct H as (x, (x0, (H, (H0, H1)))).
+    inversion H0; inversion H1.
+    rewrite H. rewrite <- H3. rewrite <- H4.  reflexivity.
+  - right.
+    destruct H as (x0, (x1, (H, (H0, H1)))).
+    inversion H0; inversion H1. 
+    exists (w2 ++ w0 ++ w4).
+    unfold Char in H4.
+    rewrite H, H10, H5, H4. reflexivity.
+Qed.
 
 
 (**
@@ -115,16 +122,21 @@ Qed.
 Rearrange the following terms. Hint use the distribution and absorption laws.
 
  *)
+
+
 Theorem ex5: ("0" U Nil) >> ( "1" * ) == ( "0" >> "1" * ) U ( "1" * ).
 Proof.
   unfold Equiv.
-  unfold In.
-  unfold Char.
   split.
-  - intros. destruct H. destruct H. destruct H.
-
-
-Admitted.
+  - intros. 
+    rewrite <- app_union_distr_l in H.
+    rewrite app_l_nil_rw in H.
+    apply H.
+  - intros.
+    rewrite <- app_union_distr_l.
+    rewrite app_l_nil_rw.
+    apply H.
+Qed.
 
 (**
 
@@ -157,13 +169,38 @@ Proof.
          ** unfold Char; reflexivity.
 Qed.
 
-
 Theorem ex7: "b" >> ("a" U "b" U Nil) * >> Nil == "b" >> ("b" U "a") *.
 Proof.
-Admitted.
+  split; intros.
+  - rewrite app_r_nil_rw in H.
+    rewrite union_sym_rw in H.
+    rewrite star_union_nil_rw in H.
+    rewrite union_sym_rw.
+    apply H.
+  - rewrite app_r_nil_rw.
+    rewrite union_sym_rw.
+    rewrite star_union_nil_rw.
+    rewrite union_sym_rw in H.
+    apply H.
+Qed.
 
 
 Theorem ex8: (("b" >> ("a" U {}) ) U (Nil >> {} >> "c")* ) * == ("b" >> "a") *.
 Proof.
-Admitted.
+  split; intros.
+  - rewrite union_r_void_rw in H.
+    rewrite app_r_void_rw in H.
+    rewrite app_l_void_rw in H.
+    rewrite star_void_rw in H.
+    rewrite union_sym_rw in H.
+    rewrite star_union_nil_rw in H.
+    apply H.
+  - rewrite union_r_void_rw.
+    rewrite app_r_void_rw.
+    rewrite app_l_void_rw.
+    rewrite star_void_rw.
+    rewrite union_sym_rw.
+    rewrite star_union_nil_rw.
+    apply H.
+Qed.
 
