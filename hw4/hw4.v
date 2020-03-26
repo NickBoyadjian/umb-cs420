@@ -42,12 +42,35 @@ Qed.
 Show that 'bb' is rejected by the following regular expression.
 
  *)
+
+
 Theorem ex2: ~ (["b"; "b"] \in (r_star "a" ;; ("b" || "c") ;; r_star "a")).
 Proof.
-  unfold not. intros.
-  Search (r_star _).
-  
-Admitted.
+  unfold not; intros.
+  inversion H; subst; clear H.
+  destruct s1.
+  - inversion H3; subst; clear H3.
+    -- inversion H5.
+    -- inversion H1; subst; clear H1.
+       * inversion H0; subst; clear H0.
+          inversion H5.
+       * inversion H0; subst; clear H0.
+          inversion H5.
+  - inversion H2; subst; clear H2.
+    inversion H1; subst; clear H1.
+    -- rewrite H7 in H5. simpl in *.
+       inversion H4; subst; clear H4.
+       * inversion H2; subst; clear H2.
+         inversion H3; subst; clear H3.
+         ** inversion H5.
+         ** inversion H0; subst; clear H0.
+            inversion H5.
+       * inversion H2; subst; clear H2. inversion H5.
+    -- rewrite H7 in H5.
+       inversion H0; subst; clear H0. inversion H5.
+Qed.
+
+
 
 (**
 
@@ -79,7 +102,8 @@ Revisit slide 4 of lecture 10.
 
 
  *)
-Theorem ex4: exists r, size r <= 6 /\  ((r_star ( (r_all || r_star "c" ) ;; r_void) ;; r_star ("a" || "b")) ;; r_star r_nil;; "c" <==> r).
+Theorem ex4: exists r, size r <= 6 /\  
+((r_star ( (r_all || r_star "c" ) ;; r_void) ;; r_star ("a" || "b")) ;; r_star r_nil;; "c" <==> r).
 Proof.
   exists (r_star ("a" || "b") ;; "c").
   split. 
@@ -127,7 +151,8 @@ Proof.
   - simpl. unfold Equiv. split; intros.
     * inversion H. subst. apply nil_in.
     * inversion H. subst. rewrite r_nil_rw. apply H.
-  - 
+  - simpl. unfold Equiv. intros. split; intros.
+    * unfold In in *.
 Admitted.
 
 (**
@@ -142,6 +167,8 @@ Revisit slide 4 of lecture 10.
  *)
 Theorem ex6: exists r, (Accept r == fun w => w = ["a"; "c"] \/ w = ["b"; "c"]) /\ size r = 5.
 Proof.
+  unfold Equiv.
+  
   
 Admitted.
 
