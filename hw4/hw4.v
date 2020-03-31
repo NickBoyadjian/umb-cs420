@@ -139,7 +139,6 @@ match l with
 end.
 
 
-
 Theorem ex5: forall l, exists (r_word:list ascii -> regex), Accept (r_word l) == fun w => w = l.
 Proof.
   exists r_word'.
@@ -147,10 +146,20 @@ Proof.
   - simpl. unfold Equiv. split; intros.
     * inversion H. subst. apply nil_in.
     * inversion H. subst. rewrite r_nil_rw. apply H.
-  - simpl. unfold Equiv. intros. split; intros.
-    * unfold In in *. inversion H. subst. inversion H2.
-      
-Admitted.
+  - simpl. unfold Equiv. split; intros.
+    * inversion H; subst; clear H.
+      inversion H2; subst; clear H2.
+      destruct IHl with (w:=s2).
+      intuition.
+      rewrite H1.
+      reflexivity.
+    * unfold In in *. 
+      rewrite H.
+      apply accept_app with (s1:=[a]) (s2:=l).
+      { apply accept_char. }
+      { apply IHl. unfold In. reflexivity. }
+      { reflexivity. }
+Qed.
 
 (**
 
