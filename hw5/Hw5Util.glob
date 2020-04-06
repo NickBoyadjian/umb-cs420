@@ -1,0 +1,161 @@
+DIGEST 64a5c95b76da76f8a2c67500fe03aef6
+FHw5Util
+R15:31 Coq.Strings.Ascii <> <> lib
+R49:62 Coq.Lists.List <> <> lib
+def 122:125 <> rule
+R136:138 Coq.Init.Datatypes <> ::type_scope:x_'*'_x not
+R131:135 Coq.Strings.Ascii <> ascii ind
+R139:142 Coq.Init.Datatypes <> list ind
+R144:148 Coq.Strings.Ascii <> ascii ind
+rec 170:176 <> grammar
+proj 187:198 <> grammar_vars
+proj 218:234 <> grammar_terminals
+proj 254:266 <> grammar_rules
+proj 285:297 <> grammar_start
+R202:205 Coq.Init.Datatypes <> list ind
+R207:211 Coq.Strings.Ascii <> ascii ind
+R238:241 Coq.Init.Datatypes <> list ind
+R243:247 Coq.Strings.Ascii <> ascii ind
+R270:273 Coq.Init.Datatypes <> list ind
+R275:278 Hw5Util <> rule def
+R301:305 Coq.Strings.Ascii <> ascii ind
+def 323:324 <> g1
+R336:527 Hw5Util <> Build_grammar constr
+R443:452 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R475:484 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R502:511 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R521:526 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R453:453 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R457:458 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R474:474 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R459:459 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R463:464 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R468:469 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R473:473 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R485:485 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R489:490 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R501:501 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R491:491 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R495:496 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R500:500 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R512:512 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R516:517 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R520:520 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R518:519 Coq.Lists.List ListNotations ::list_scope:'['_']' not
+R384:384 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R388:389 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R393:393 Coq.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R352:352 Coq.Lists.List ListNotations ::list_scope:'['_x_']' not
+R356:356 Coq.Lists.List ListNotations ::list_scope:'['_x_']' not
+ind 544:548 <> Yield
+constr 602:610 <> yield_def
+R553:559 Hw5Util <> grammar rec
+R574:577 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R588:591 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R578:581 Coq.Init.Datatypes <> list ind
+R583:587 Coq.Strings.Ascii <> ascii ind
+R564:567 Coq.Init.Datatypes <> list ind
+R569:573 Coq.Strings.Ascii <> ascii ind
+R553:559 Hw5Util <> grammar rec
+R574:577 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R588:591 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R578:581 Coq.Init.Datatypes <> list ind
+R583:587 Coq.Strings.Ascii <> ascii ind
+R564:567 Coq.Init.Datatypes <> list ind
+R569:573 Coq.Strings.Ascii <> ascii ind
+R670:677 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R696:703 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R720:727 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R728:732 Hw5Util <> Yield ind
+R739:740 Hw5Util <> w2 var
+R736:737 Hw5Util <> w1 var
+R734:734 Hw5Util <> G var
+R706:708 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R704:705 Hw5Util <> w2 var
+R710:713 Coq.Init.Datatypes <> ::list_scope:x_'++'_x not
+R709:709 Hw5Util <> u var
+R715:718 Coq.Init.Datatypes <> ::list_scope:x_'++'_x not
+R714:714 Hw5Util <> w var
+R719:719 Hw5Util <> v var
+R680:682 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R678:679 Hw5Util <> w1 var
+R684:687 Coq.Init.Datatypes <> ::list_scope:x_'++'_x not
+R683:683 Hw5Util <> u var
+R691:694 Coq.Init.Datatypes <> ::list_scope:x_'++'_x not
+R688:688 Coq.Lists.List ListNotations ::list_scope:'['_x_']' not
+R690:690 Coq.Lists.List ListNotations ::list_scope:'['_x_']' not
+R689:689 Hw5Util <> A var
+R695:695 Hw5Util <> v var
+R643:644 Coq.Lists.List <> In def
+R654:666 Hw5Util <> grammar_rules proj
+R668:668 Hw5Util <> G var
+R646:646 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R648:649 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R651:651 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R647:647 Hw5Util <> A var
+R650:650 Hw5Util <> w var
+ind 754:763 <> Derivation
+constr 809:822 <> derivation_nil
+constr 864:878 <> derivation_cons
+R768:774 Hw5Util <> grammar rec
+R795:798 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R778:781 Coq.Init.Datatypes <> list ind
+R784:787 Coq.Init.Datatypes <> list ind
+R789:793 Coq.Strings.Ascii <> ascii ind
+R768:774 Hw5Util <> grammar rec
+R795:798 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R778:781 Coq.Init.Datatypes <> list ind
+R784:787 Coq.Init.Datatypes <> list ind
+R789:793 Coq.Strings.Ascii <> ascii ind
+R829:838 Hw5Util <> Derivation ind
+R842:842 Coq.Lists.List ListNotations ::list_scope:'['_x_']' not
+R860:860 Coq.Lists.List ListNotations ::list_scope:'['_x_']' not
+R843:843 Coq.Lists.List ListNotations ::list_scope:'['_x_']' not
+R859:859 Coq.Lists.List ListNotations ::list_scope:'['_x_']' not
+R844:856 Hw5Util <> grammar_start proj
+R858:858 Hw5Util <> G var
+R840:840 Hw5Util <> G var
+R926:933 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R945:952 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R953:962 Hw5Util <> Derivation ind
+R968:971 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R967:967 Hw5Util <> v var
+R973:976 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R972:972 Hw5Util <> u var
+R977:978 Hw5Util <> ws var
+R964:964 Hw5Util <> G var
+R934:938 Hw5Util <> Yield ind
+R944:944 Hw5Util <> v var
+R942:942 Hw5Util <> u var
+R940:940 Hw5Util <> G var
+R904:913 Hw5Util <> Derivation ind
+R919:922 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R918:918 Hw5Util <> u var
+R923:924 Hw5Util <> ws var
+R915:915 Hw5Util <> G var
+ind 993:998 <> Accept
+constr 1038:1047 <> accept_def
+R1003:1009 Hw5Util <> grammar rec
+R1024:1027 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1014:1017 Coq.Init.Datatypes <> list ind
+R1019:1023 Coq.Strings.Ascii <> ascii ind
+R1003:1009 Hw5Util <> grammar rec
+R1024:1027 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1014:1017 Coq.Init.Datatypes <> list ind
+R1019:1023 Coq.Strings.Ascii <> ascii ind
+R1091:1098 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1150:1157 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1158:1163 Hw5Util <> Accept ind
+R1167:1167 Hw5Util <> w var
+R1165:1165 Hw5Util <> G var
+R1099:1104 Coq.Lists.List <> Forall ind
+R1149:1149 Hw5Util <> w var
+R1116:1122 Coq.Lists.List <> In def
+R1127:1143 Hw5Util <> grammar_terminals proj
+R1145:1145 Hw5Util <> G var
+R1124:1124 Hw5Util <> c var
+R1071:1080 Hw5Util <> Derivation ind
+R1086:1087 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R1085:1085 Hw5Util <> w var
+R1088:1089 Hw5Util <> ws var
+R1082:1082 Hw5Util <> G var
