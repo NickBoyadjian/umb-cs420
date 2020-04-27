@@ -124,11 +124,10 @@ Proof.
     inversion H1; subst; clear H1.
     rewrite <- app_nil_end. 
     apply H0.
-  - simpl in *.
-    inversion H1; subst; clear H1.
-    rewrite <- H3 in IHu.
-
-Admitted.
+  - induction u.
+    * inversion H1.
+    * inversion H1.
+Qed.
 
 (**
 
